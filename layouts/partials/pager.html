@@ -1,0 +1,10 @@
+{{ if ne .Paginator.TotalPages 1 }}
+<nav class="pager" role="navigation">
+  <a class="pager-item pager-previous" {{ if .Paginator.HasPrev }}href="{{ .Paginator.Prev.URL }}"{{ else }}aria-disabled="true"{{ end }} title="Go to previous page" aria-label="Go to previous page">-</a>
+  <span class="pager-number">
+    <span class="pager-current">{{ .Paginator.PageNumber }}</span>
+    <span class="pager-total"> / {{ .Paginator.TotalPages }}</span>
+  </span>
+  <a class="pager-item pager-next" {{ if .Paginator.HasNext }}href="{{ .Paginator.Next.URL }}"{{ else }}aria-disabled="true"{{ end }} title="Go to next page"  aria-label="Go to next page">+</a>
+</nav>
+{{ end }}

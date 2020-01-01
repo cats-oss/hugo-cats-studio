@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="header-left">
+    <p class="header-title">
+      <a href="{{ .Site.BaseURL }}">
+        <img
+          src="{{ .Site.Params.Logo.Src }}"
+          width="{{ .Site.Params.Logo.Width }}"
+          height="{{ .Site.Params.Logo.Height }}"
+          alt="{{ .Site.Params.Logo.Alt }}"
+        />
+        {{ if ne true .IsHome }}
+        <span>{{ .Site.Title }}</span>
+        {{ end }}
+      </a>
+    </p>
+  </div>
+
+  <div class="header-right">
+    <ul class="social">
+      {{ with .Site.Params.github }}
+      <li>
+        <a href="{{ . }}">{{ partial "icon/github" . }}</a>
+      </li>
+      {{ end }}
+      <li>
+        <a href="{{ .Site.RSSLink }}">{{ partial "icon/rss" . }}</a>
+      </li>
+    </ul>
+  </div>
+</header>

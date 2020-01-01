@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="hero top">
+  <div class="container">
+    <h1 class="top-title">{{ replace .Site.Title " " "<br />" | safeHTML }}</h1>
+    <p class="top-subtitle">{{ replaceRE "\r?\n" "<br />" .Site.Params.subtitle | safeHTML }}</p>
+  </div>
+</div>
+
+<div class="container">
+  {{ range where .Paginator.Pages "Section" "in" site.Params.mainSections }}
+    {{ partial "post-item" . }}
+  {{ end }}
+
+  {{ partial "pager" . }}
+</div>
+
+
+{{ end }}

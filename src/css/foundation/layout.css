@@ -1,0 +1,15 @@
+.container {
+  padding-right: calc(var(--space-abs) * 2);
+  padding-left: calc(var(--space-abs) * 2);
+
+  @media (--viewport-tablet) {
+    padding-right: calc(var(--space-abs) * 3);
+    padding-left: calc(var(--space-abs) * 3);
+  }
+
+  @media (--viewport-desktop) {
+    width: 820px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

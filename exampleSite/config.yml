@@ -1,0 +1,22 @@
+baseURL: 'https://example.com'
+theme: 'hugo-cats-studio'
+languageCode: ja-JP
+title: CATS PRODUCTIVITY BLOG
+params:
+  logo:
+    src: /images/logo.png
+    alt: CATS
+    width: 48
+    height: 48
+  subtitle: |
+    CATS Productivity team は
+    クライアント領域の開発における様々な問題を
+    技術で解決していくチームです
+  github: https://github.com/cats-oss
+googleAnalytics: UA-00000000-0
+hasCJKLanguage: true
+paginate: 10
+taxonomies:
+  author: authors
+permalinks:
+  post: /:year/:filename/

@@ -1,0 +1,19 @@
+.footer {
+  margin-top: calc(var(--space-rel) * 15);
+  padding-top: calc(var(--space-rel) * 12);
+  padding-bottom: calc(var(--space-rel) * 12);
+  border-top: 1px solid var(--color-border);
+
+  @media (--viewport-tablet) {
+    margin-top: calc(var(--space-rel) * 20);
+  }
+}
+
+.footer-copyright {
+  margin: 0;
+  color: var(--color-text-weak);
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  font-size: var(--font-size-xs);
+}

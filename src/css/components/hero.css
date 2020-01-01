@@ -1,0 +1,9 @@
+.hero {
+  margin-top: calc(var(--space-abs) * 10);
+  margin-bottom: calc(var(--space-abs) * 12);
+
+  @media (--viewport-tablet) {
+    margin-top: calc(var(--space-abs) * 15);
+    margin-bottom: calc(var(--space-abs) * 20);
+  }
+}

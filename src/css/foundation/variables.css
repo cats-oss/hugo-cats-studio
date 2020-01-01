@@ -1,0 +1,49 @@
+@custom-media --viewport-tablet (min-width: 567px);
+@custom-media --viewport-desktop (min-width: 820px);
+
+:root {
+  /* Color */
+  --color-primary: #c8338c;
+  --color-secondary: #121212;
+  --color-accent: #a322d8;
+  --color-background: #fff;
+  --color-border: #d4dcde;
+  --color-text-body: #292145;
+  --color-text-weak: #76708a;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: color-mod(var(--color-text-link) blackness(40%));
+  --color-code-text: var(--color-text-body);
+  --color-code-background: #f0f0f0;
+  --color-code-block-background: #222433;
+  --color-selection: rgba(0, 0, 0, 0.15);
+
+  /* Typography */
+  --font-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --font-serif: serif;
+  --font-code: serif;
+  --font-code: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+    monospace;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-display-xs: 1.75rem; /* 28px */
+  --font-display-sm: 2rem; /* 32px */
+  --font-display-md: 2.5rem; /* 40px */
+  --font-display-lg: 2.875rem; /* 46px */
+  --font-display-xl: 3.25rem; /* 52px */
+  --line-height-sm: 1.3;
+  --line-height-md: 1.92;
+  --line-height-lg: 2;
+
+  /* Layout */
+  --space-abs: 8px;
+  --space-rel: 0.5rem; /* 8px */
+
+  /* Animation */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

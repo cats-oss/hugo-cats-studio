@@ -1,0 +1,16 @@
+{{ $datetime := .Date.Format "2006-01-02" }}
+{{ $date := .Date.Format "January 02, 2006" }}
+
+<div class="post-meta">
+  {{ with .Params.authors }}
+    {{ with (index . 0) }}
+      {{ with $.Site.GetPage (printf "/authors/%s" (. | urlize)) }}
+      <a class="post-avatar" href="{{ .RelPermalink }}"><img class="avatar" src="{{ .Params.icon }}" width="44" height="44" alt="{{ .Params.name }}" loading="lazy" /></a>
+      <div>
+        <p class="post-author"><a href="{{ .RelPermalink }}">{{ .Params.name }}</a></p>
+        <p class="post-date">Published <time datetime="{{ $datetime }}" itemprop="datePublished">{{ $date }}</time></p>
+      </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>

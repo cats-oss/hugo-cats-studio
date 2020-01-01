@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: var(--color-selection);
+}
+
+::-moz-selection {
+  background-color: var(--color-selection);
+}
+
+:focus {
+  outline: 3px solid rgba(141, 202, 253, 0.5);
+  outline-offset: 1px;
+}
+
+html {
+  box-sizing: border-box;
+  color: var(--color-text-body);
+  font-family: var(--font-sans-serif);
+  line-height: var(--line-height-md);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2.8em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  line-height: var(--line-height-sm);
+}
+
+h1,
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+@media (--viewport-tablet) {
+  h1,
+  h2 {
+    font-size: 1.95rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.35rem;
+  }
+
+  h5 {
+    font-size: 1.12rem;
+  }
+}
+
+a {
+  color: var(--color-text-link);
+  transition-property: color;
+  transition-duration: 120ms;
+  transition-timing-function: var(--ease-out);
+
+  &:hover {
+    color: var(--color-text-link-hover);
+    text-decoration: none;
+  }
+}
+
+img {
+  vertical-align: bottom;
+}
+
+sub,
+sup {
+  font-size: 0.85em;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-code);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+code {
+  display: inline-block;
+  margin: 0 0.15em;
+  padding: 0.08em 0.3em;
+  color: var(--color-code-text);
+  background-color: var(--color-code-background);
+  border-radius: 2px;
+  font-size: 0.77em;
+  font-weight: normal;
+}
+
+pre {
+  position: relative;
+  display: block;
+  tab-size: 4;
+  hyphens: none;
+  word-wrap: normal;
+}
+
+blockquote {
+  position: relative;
+  margin: 1.5rem auto;
+  padding: 1em 2em;
+  color: var(--color-text-weak);
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background: var(--color-border);
+    content: '';
+  }
+
+  & *:first-child {
+    margin-top: 0;
+  }
+
+  & *:last-child {
+    margin-bottom: 0;
+  }
+
+  &.twitter-tweet {
+    padding: 0;
+    border: none;
+  }
+}

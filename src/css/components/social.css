@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & li:not(:first-child) {
+    margin-left: calc(var(--space-abs) * 1);
+  }
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    color: var(--color-text-body);
+
+    &:hover {
+      color: var(--color-text-link);
+    }
+  }
+
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
+}

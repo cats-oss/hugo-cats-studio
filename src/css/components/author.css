@@ -1,0 +1,22 @@
+.author {
+  text-align: center;
+}
+
+.author-name {
+  margin: calc(var(--space-rel) * 2) 0 0;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2.875rem;
+}
+
+.author-bio {
+  margin: calc(var(--space-rel) * 1) 0 0;
+  font-weight: bold;
+  font-size: var(--font-size-sm);
+}
+
+.author-social {
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--space-rel) * 3);
+}

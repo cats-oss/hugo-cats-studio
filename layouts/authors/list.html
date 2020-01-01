@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section class="hero author">
+  <div class="container">
+    <img class="avatar" src="{{ .Params.icon }}" width="128" height="128" alt="" />
+    <h1 class="author-name">{{ .Params.name }}</h1>
+    <p class="author-bio">{{ .Params.bio }}</p>
+    <div class="author-social">
+      <ul class="social author-social">
+        {{ $social := slice "github" "twitter" }}
+        {{ $params := .Params }}
+        {{ range $sns := $social }}{{ with (index $params $sns) }}
+        <li>
+          <a href="{{ . }}">{{ partial (printf "icon/%s" $sns) . }}</a>
+        </li>
+        {{ end }}{{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TODO: Pagination -->
+
+<div class="container">
+  {{ range .Data.Pages }}
+    {{ partial "post-item" . }}
+  {{ end }}
+</div>
+
+{{ end }}

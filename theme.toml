@@ -1,0 +1,12 @@
+name = "cats studio"
+license = "MIT"
+licenselink = ""
+description = "Simple, Basic, and Fast Blog theme"
+homepage = "https://ca-tech.studio"
+tags = ["blog"]
+features = []
+min_version = "0.62.0"
+
+[author]
+    name = "CATS Open Source Softwares"
+    homepage = "https://github.com/cats-oss"

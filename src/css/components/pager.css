@@ -1,0 +1,35 @@
+.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(var(--space-abs) * 15);
+
+  @media (--viewport-tablet) {
+    margin-top: calc(var(--space-abs) * 20);
+  }
+}
+
+.pager-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--color-text-body);
+  font-size: var(--font-size-xl);
+
+  &[aria-disabled='true'] {
+    color: var(--color-text-weak);
+  }
+}
+
+.pager-number {
+  margin: 0 calc(var(--space-rel) * 2);
+}
+
+.pager-total {
+  color: var(--color-text-weak);
+}
