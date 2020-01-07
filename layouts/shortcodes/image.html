@@ -1,7 +1,5 @@
-<p>
-  {{ if .IsNamedParams }}
-  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy">
-  {{ else }}
-  <img src="{{ .Get 0 }}" alt="{{ .Get 1 }}" loading="lazy">
-  {{ end }}
-</p>
+{{ if .IsNamedParams }}
+<img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}" loading="lazy">
+{{ else }}
+<img src="{{ .Get 0 }}" alt="{{ .Get 1 }}" loading="lazy">
+{{ end }}
