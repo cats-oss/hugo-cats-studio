@@ -1,6 +1,7 @@
 ---
 title: Styleguide (English ver)
 date: 2019-12-30
+hero: hero.png
 authors: ['daichi-furiya']
 ---
 

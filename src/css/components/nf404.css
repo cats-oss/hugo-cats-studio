@@ -1,0 +1,19 @@
+.nf404 {
+  text-align: center;
+}
+
+.nf404-title {
+  margin: calc(var(--space-rel) * 2) 0 0;
+  font-style: italic;
+  font-weight: bold;
+  font-size: var(--font-display-xs);
+  line-height: 1.1;
+
+  & > span {
+    display: block;
+  }
+
+  & > span:first-child {
+    font-size: 6rem;
+  }
+}

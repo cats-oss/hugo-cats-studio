@@ -11,6 +11,14 @@
       {{- $.Scratch.Set "description" .Summary -}}
     {{- else -}}
       {{- $.Scratch.Set "description" (replaceRE "\r?\n" "" .Site.Params.subtitle) -}}
+    {{- end -}}
+
+    {{- if (isset .Params "hero") -}}
+      {{- $.Scratch.Set "image" (printf "%s/%s/%s" (trim .Site.BaseURL "/") (trim .RelPermalink "/") .Params.hero) -}}
+    {{- else if (isset .Site.Params "ogp") -}}
+      {{- $.Scratch.Set "image" (printf "%s/%s" (trim .Site.BaseURL "/") (trim .Site.Params.ogp "/")) -}}
+    {{- else -}}
+      {{- $.Scratch.Set "image" "" -}}
     {{- end }}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,14 +35,16 @@
     <meta property="og:description" content="{{ $.Scratch.Get "description" }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:image" content="{{ trim .Site.BaseURL "/" }}{{ if .Params.hero }}{{ .Params.hero }}{{ else }}{{ .Site.Params.ogp }}{{ end }}">
+    <meta property="og:image" content="{{ $.Scratch.Get "image" }}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="{{ $.Scratch.Get "description" }}">
     <meta name="twitter:title" content="{{ $.Scratch.Get "title" }}">
     <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
-    <meta name="twitter:image" content="{{ trim .Site.BaseURL "/" }}{{ if .Params.hero }}{{ .Params.hero }}{{ else }}{{ .Site.Params.ogp }}{{ end }}">
+    <meta name="twitter:image" content="{{ $.Scratch.Get "image" }}">
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="{{ .Site.Params.favicon }}">
+    {{- with .Site.Params.favicon -}}
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{{ . }}">
+    {{- end -}}
     <link rel="alternate" href="{{ with .OutputFormats.Get "RSS" }}{{ .Permalink }}{{ end }}" type="application/rss+xml" title="{{ .Site.Title }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,700i&display=swap">
     <link rel="stylesheet" href="/assets/{{ index .Site.Data.manifest "style.css" }}">

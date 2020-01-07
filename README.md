@@ -1,5 +1,7 @@
 # Hugo CATS Studio
 
+![Screenshot](screenshot.png)
+
 > A simple and minimal Hugo theme.
 
 ## Installation
@@ -48,6 +50,30 @@ Add `authors` field to `content/post/your-post.md`.
 title: Example post
 authors: ['wadackel']
 ---
+```
+
+### Example config
+
+```yaml
+baseURL: 'https://example.com'
+theme: 'hugo-cats-studio'
+title: BLOG TITLE
+params:
+  logo:
+    src: /images/logo.png
+    alt: Alternative text content
+    width: 48
+    height: 48
+  subtitle: |
+    Text content under title 1
+    Text content under title 2
+    Text content under title 3
+  github: https://github.com/cats-oss
+googleAnalytics: UA-00000000-0
+hasCJKLanguage: true
+paginate: 10
+taxonomies:
+  author: authors
 ```
 
 ## Development

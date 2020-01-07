@@ -1,7 +1,14 @@
 {{ define "main" }}
 
-<div>
-  <h1>404</h1>
+<div class="hero nf404">
+  <div class="container">
+    <h1 class="nf404-title">
+      <span>404</span>
+      <span>Page not found.</span>
+    </h1>
+    <p class="nf404-subtitle">We can't seem to find the page you're looking for.</p>
+    <p class="nf404-link"><a href="{{ "/" | relURL }}">BACK TO HOME</a></p>
+  </div>
 </div>
 
 {{ end }}
