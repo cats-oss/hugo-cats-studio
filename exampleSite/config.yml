@@ -13,7 +13,7 @@ params:
     クライアント領域の開発における様々な問題を
     技術で解決していくチームです
   github: https://github.com/cats-oss
-googleAnalytics: UA-00000000-0
+googleAnalytics: G-0000000000
 hasCJKLanguage: true
 paginate: 10
 taxonomies:

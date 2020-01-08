@@ -69,7 +69,7 @@ params:
     Text content under title 2
     Text content under title 3
   github: https://github.com/cats-oss
-googleAnalytics: UA-00000000-0
+googleAnalytics: G-0000000000
 hasCJKLanguage: true
 paginate: 10
 taxonomies:
